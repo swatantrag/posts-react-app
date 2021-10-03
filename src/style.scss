@@ -1,0 +1,160 @@
+.app {
+    text-align: center;
+    background-color: #fde8a8;
+    padding-bottom: 20px;
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        border: 5px solid #fff;
+        background-color: #fff;
+        .header {
+            padding: 10px;
+            position: relative;
+            background-color: #ffc107;
+            button {
+                position: absolute;
+                left: 10px;
+                top: 21px;
+                color: #ddd;
+                border: 1px solid #900;
+                background-color: #900;
+                padding: 5px 15px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover {
+                    background-color: #009688;
+                    color: #fff;
+                    border-color: #009688;
+                }
+            }
+            h2 {
+                margin: 10px 0;
+                color: #900;
+            }
+        }
+        .content {
+            display: inline-block;
+            background-color: #fff;
+            text-align: left;
+            width: 100%;
+            .list-wrap {
+                margin-top: 5px;
+                table {
+                    border-spacing: 0;
+                    width: 100%;
+                    text-align: left;
+                    border: 1px solid #5e5e5e;
+                    thead th {
+                        text-align: left;
+                        background-color: #5e5e5e;
+                        color: #fff;
+                        padding: 10px 20px;
+                        border-right: 1px solid #fff;
+                        border-bottom: 1px solid #fff;
+                        &:nth-last-of-type(1) {
+                            border-right: none;
+                        }
+                    }
+                    tr {
+                        &:hover {
+                            cursor: pointer;
+                            color: #fff;
+                            td {
+                              background-color: #838282;
+                              &:nth-of-type(1) {
+                                cursor: default;
+                              }
+                            }
+                        }
+                        &:nth-of-type(odd) {
+                            background-color : #eaeaea;
+                        }
+                        &:nth-of-type(even) {
+                            background-color : #d4d4d4;
+                        }
+                        td {
+                            padding: 10px 20px;
+                            border-right: 1px solid #fff;
+                            border-bottom: 1px solid #fff;
+                            &:nth-last-of-type(1) {
+                              border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .post-wrap {
+                display: inline-block;
+                padding: 10px;
+                border: 1px solid #5e5e5e;
+                margin: 5px 0 0;
+                .post-body {
+                    background-color: #ddd;
+                    display: inline-block;
+                    padding: 20px 20px 10px;
+                    .title {
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    p {
+                        font-size: 14px;
+                        margin: 0 0 10px 0;
+                    }
+                }
+                .comment-wrap {
+                    display: inline-block;
+                    background-color: #f3f3f3;
+                    margin-top: 10px;
+                    padding: 20px;
+                    .comment-label {
+                        font-weight: bold;
+                        font-style: italic;
+                        margin-bottom: 20px;
+                        display: inline-block;
+                    }
+                    .comment {
+                        border: 1px solid #aaa;
+                        border-radius: 2px;
+                        padding: 10px 10px 0;
+                        margin-bottom: 10px;
+                        .comment-name {
+                          text-transform: capitalize;
+                          font-weight: bold;
+                          font-size: 14px;
+                        }
+                        .comment-email {
+                            font-style: italic;
+                            text-align: right;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+            .user-wrap {
+                display: inline-block;
+                padding: 10px;
+                border: 1px solid #5e5e5e;
+                margin: 5px 0 0;
+                box-sizing: border-box;
+                width: 100%;
+                background-color: #ddd;
+                padding: 20px 20px 10px;
+                p {
+                    margin: 0 0 10px;
+                    b {
+                        width: 140px;
+                        display: inline-block
+                    }
+                    &.detail {
+                        padding-left: 140px;
+                    }
+                }
+            }
+        }
+    }
+}
