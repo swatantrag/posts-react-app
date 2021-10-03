@@ -16,6 +16,7 @@ class PostLogs extends React.Component {
       userDetail: false,
       postDetailData: {},
       userDetailData: {},
+      searchItem: '',
       comments: [],
       selectedRow: {},
       headers: [
@@ -71,11 +72,17 @@ class PostLogs extends React.Component {
               </div>
               <div className="content">
                   {this.state.postList ? 
-                      <TableStruct 
-                          content={this.state.postData} 
-                          headers={this.state.headers} 
-                          handleRowClick={this.handleRowClick.bind(this)}    
-                      /> : null}
+                      <>
+                          <div className="search-wrap">
+                              <input type="text" placeholder="Search here" value={this.state.searchItem} onChange={(e) => this.setState({searchItem: e.target.value})} />
+                          </div>
+                          <TableStruct 
+                              content={this.state.postData} 
+                              headers={this.state.headers} 
+                              searchItem={this.state.searchItem}
+                              handleRowClick={this.handleRowClick.bind(this)}    
+                          />
+                      </> : null}
                   {this.state.postDetail && 
                       <div className="post-wrap">
                           <div className="post-body">

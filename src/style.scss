@@ -38,6 +38,16 @@
             background-color: #fff;
             text-align: left;
             width: 100%;
+            .search-wrap {
+                margin: 10px 0;
+                text-align: right;
+                input {
+                    border: 1px solid #d4d4d4;
+                    padding: 5px 10px;
+                    width: 300px;
+                    font-style: italic;
+                }
+            }
             .list-wrap {
                 margin-top: 5px;
                 table {
